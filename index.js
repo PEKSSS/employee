@@ -8,7 +8,6 @@ window.addEventListener('load', () => {
 function getUsers() {
 
     let html="";
-    let count = 1;
     //FETCH API
     fetch('https://api.sampleapis.com/beers/ale', {mode: 'cors'})
 
@@ -19,7 +18,7 @@ function getUsers() {
     .then(data => {
         console.log(data);
         data.forEach(element => {
-            html += `<li>${count++} - ${element.id} ${element.name}</li>`;
+            html += `<li>${element.id} - ${element.name}</li>`;
         })
         content.innerHTML = html;
     })
@@ -29,4 +28,5 @@ function getUsers() {
 
 
 }
+
 
