@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
 function getUsers() {
 
     let html="";
-    let count = 0;
+    let count = 1;
     //FETCH API
     fetch('https://peks-sampleemployeesapi.onrender.com/api/users', {mode: 'cors'})
 
@@ -26,5 +26,6 @@ function getUsers() {
     .catch(error => {
         console.error('Error fetching users:', error);
     })
+
 
 }
