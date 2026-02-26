@@ -1,4 +1,3 @@
-
 const content = document.querySelector('#content');
 
 window.addEventListener('load', () => {
@@ -18,7 +17,7 @@ function getUsers() {
     .then(data => {
         console.log(data);
         data.forEach(element => {
-            html += `<li>${element.id} - ${element.name}</li>`;
+            html += `<li>${element.image}${element.id} - ${element.name}</li>`;
         })
         content.innerHTML = html;
     })
@@ -28,5 +27,6 @@ function getUsers() {
 
 
 }
+
 
 
