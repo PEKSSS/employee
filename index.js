@@ -10,7 +10,7 @@ function getUsers() {
     let html="";
     let count = 1;
     //FETCH API
-    fetch('https://peks-sampleemployeesapi.onrender.com/api/users', {mode: 'cors'})
+    fetch('https://api.sampleapis.com/beers/ale', {mode: 'cors'})
 
     .then(response =>{
         console.log(response);
@@ -19,7 +19,7 @@ function getUsers() {
     .then(data => {
         console.log(data);
         data.forEach(element => {
-            html += `<li>${count++} - ${element.first_name} ${element.last_name}</li>`;
+            html += `<li>${count++} - ${element.id} ${element.name}</li>`;
         })
         content.innerHTML = html;
     })
@@ -29,3 +29,4 @@ function getUsers() {
 
 
 }
+
